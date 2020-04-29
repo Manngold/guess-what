@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.js": "/guess-what/static/js/main.53f85c34.chunk.js",
+    "main.js.map": "/guess-what/static/js/main.53f85c34.chunk.js.map",
+    "runtime-main.js": "/guess-what/static/js/runtime-main.6e0bf26a.js",
+    "runtime-main.js.map": "/guess-what/static/js/runtime-main.6e0bf26a.js.map",
+    "static/js/2.ab4a5181.chunk.js": "/guess-what/static/js/2.ab4a5181.chunk.js",
+    "static/js/2.ab4a5181.chunk.js.map": "/guess-what/static/js/2.ab4a5181.chunk.js.map",
+    "index.html": "/guess-what/index.html",
+    "precache-manifest.b7fedcb62d5259b0e0e9ce1440e9fe75.js": "/guess-what/precache-manifest.b7fedcb62d5259b0e0e9ce1440e9fe75.js",
+    "service-worker.js": "/guess-what/service-worker.js",
+    "static/js/2.ab4a5181.chunk.js.LICENSE.txt": "/guess-what/static/js/2.ab4a5181.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.6e0bf26a.js",
+    "static/js/2.ab4a5181.chunk.js",
+    "static/js/main.53f85c34.chunk.js"
+  ]
+}
