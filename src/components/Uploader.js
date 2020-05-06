@@ -6,21 +6,29 @@ const Container = styled.div``;
 const Upload = styled.input`
     border: none;
     width: 16rem;
-    height: 2rem;
+    line-height: 2rem;
+    font-size: 1rem;
+    padding-left: 10px;
+    outline: none;
 `;
-
+const Button = styled.input`
+    margin-left: 20px;
+    font-size: 2rem;
+`;
 function Uploader({ setImageSrc }) {
     const changeImage = (e) => {
-        const imgSrc = e.target.value;
+        e.preventDefault();
+        const imgSrc = document.querySelector("#url_container").value;
         setImageSrc(imgSrc);
     };
     return (
         <Container>
             <Upload
+                id="url_container"
                 type="text"
-                onChange={changeImage}
-                placeholder="Insert Image source"
+                placeholder="Insert Image Url"
             />
+            <Button type="submit" onClick={changeImage} value="Upload" />
         </Container>
     );
 }

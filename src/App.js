@@ -20,7 +20,7 @@ function App() {
 
     return (
         <Container>
-            <Uploader setImageSrc={setImageSrc} />
+            <Uploader imageSrc={imageSrc} setImageSrc={setImageSrc} />
             <Classifier imageSrc={imageSrc} />
         </Container>
     );

@@ -12,13 +12,17 @@ const Container = styled.div`
 `;
 
 const Image = styled.img`
-    height: 20rem;
-    width: 30rem;
+    height: 30rem;
+    width: 40rem;
 `;
 
-const List = styled.ul``;
+const List = styled.ul`
+    margin-top: 20px;
+`;
 
-const Item = styled.li``;
+const Item = styled.li`
+    list-style-type: none;
+`;
 function Classifier({ imageSrc }) {
     const [results, setResults] = useState([]);
     const [isLoading, setLoading] = useState(false);
