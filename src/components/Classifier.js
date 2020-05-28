@@ -27,6 +27,12 @@ function Classifier({ imageSrc }) {
     const [results, setResults] = useState([]);
     const [isLoading, setLoading] = useState(false);
 
+    const loadErrorHandler = (e) => {
+        e.preventDefault();
+        e.target.src =
+            "https://miro.medium.com/max/2800/0*heiz7awNkQ1B0O8e.png";
+    };
+
     const classifyImg = () => {
         setLoading(true);
         const classifier = ml5.imageClassifier("MobileNet", () =>
@@ -46,12 +52,17 @@ function Classifier({ imageSrc }) {
     };
     return (
         <Container>
-            <Image
-                src={imageSrc}
-                id="image"
-                onLoad={classifyImg}
-                crossOrigin="anonymous"
-            />
+            {imageSrc && imageSrc.length !== 0 ? (
+                <Image
+                    src={imageSrc}
+                    id="image"
+                    onLoad={classifyImg}
+                    onError={loadErrorHandler}
+                    crossOrigin="anonymous"
+                />
+            ) : (
+                <span>Please Load Image</span>
+            )}
             {isLoading ? (
                 <ClipLoader />
             ) : (
