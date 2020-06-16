@@ -23,8 +23,7 @@ const List = styled.ul`
 const Item = styled.li`
     list-style-type: none;
 `;
-function Classifier({ imageSrc }) {
-    const [results, setResults] = useState([]);
+function Classifier({ imageSrc, results, setResults, setChartData }) {
     const [isLoading, setLoading] = useState(false);
 
     const loadErrorHandler = (e) => {
@@ -35,6 +34,12 @@ function Classifier({ imageSrc }) {
 
     const classifyImg = () => {
         setLoading(true);
+        let data = {
+            columns: [],
+            type: "donut",
+            title: "Top 5",
+        };
+
         const classifier = ml5.imageClassifier("MobileNet", () =>
             console.log("Module loaded")
         );
@@ -48,6 +53,12 @@ function Classifier({ imageSrc }) {
             .then((classifiedResults) => {
                 setLoading(false);
                 setResults(classifiedResults);
+                for (let result of classifiedResults) {
+                    const { columns } = data;
+                    const { label, confidence } = result;
+                    columns.push([label, confidence]);
+                }
+                setChartData(data);
             });
     };
     return (

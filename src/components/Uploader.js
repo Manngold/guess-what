@@ -21,12 +21,16 @@ function Uploader({ setImageSrc }) {
         const imgSrc = document.querySelector("#url_container").value;
         setImageSrc(imgSrc);
     };
+    const clearInput = (e) => {
+        e.target.value = "";
+    };
     return (
         <Container>
             <Upload
                 id="url_container"
                 type="text"
                 placeholder="Insert Image Url"
+                onClick={clearInput}
             />
             <Button type="submit" onClick={changeImage} value="Upload" />
         </Container>
