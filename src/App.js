@@ -3,30 +3,30 @@ import styled from "styled-components";
 import Classifier from "./components/Classifier";
 import Uploader from "./components/Uploader";
 import DonutChart from "./components/Chart";
+import GlobalStyles from "./components/GlobalStyles";
 
 const AppContainer = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     background-color: #ecf0f1;
     height: 100vh;
     width: 100%;
-    padding: 0;
-    margin: 0;
 `;
 
 const Container = styled.div`
-    margin: 0px;
-    padding: 0px;
     height: 100%;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
 `;
 
-const Title = styled.h1``;
+const Title = styled.h1`
+    font-size: 30px;
+    margin: 10px;
+`;
 
 const ChartContainer = styled.div`
     display: flex;
@@ -43,19 +43,21 @@ function App() {
 
     return (
         <AppContainer>
+            <GlobalStyles />
+            <Title>Guess What</Title>
+            <Uploader imageSrc={imageSrc} setImageSrc={setImageSrc} />
             <Container>
-                <Title>Guess What</Title>
-                <Uploader imageSrc={imageSrc} setImageSrc={setImageSrc} />
                 <Classifier
                     imageSrc={imageSrc}
                     results={results}
                     setResults={setResults}
+                    chartData={chartData}
                     setChartData={setChartData}
                 />
+                <ChartContainer>
+                    <DonutChart chartData={chartData} />
+                </ChartContainer>
             </Container>
-            <ChartContainer>
-                <DonutChart chartData={chartData} />
-            </ChartContainer>
         </AppContainer>
     );
 }

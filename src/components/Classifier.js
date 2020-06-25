@@ -9,6 +9,8 @@ const Container = styled.div`
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    width: 100%;
+    height: 100%;
 `;
 
 const Image = styled.img`
@@ -23,7 +25,13 @@ const List = styled.ul`
 const Item = styled.li`
     list-style-type: none;
 `;
-function Classifier({ imageSrc, results, setResults, setChartData }) {
+function Classifier({
+    imageSrc,
+    results,
+    setResults,
+    chartData,
+    setChartData,
+}) {
     const [isLoading, setLoading] = useState(false);
 
     const loadErrorHandler = (e) => {
@@ -48,7 +56,11 @@ function Classifier({ imageSrc, results, setResults, setChartData }) {
 
         classifier
             .predict(image, 5, (err, classifiedResults) => {
-                return classifiedResults;
+                if (err) {
+                    console.log(err);
+                } else {
+                    return classifiedResults;
+                }
             })
             .then((classifiedResults) => {
                 setLoading(false);
@@ -57,6 +69,9 @@ function Classifier({ imageSrc, results, setResults, setChartData }) {
                     const { columns } = data;
                     const { label, confidence } = result;
                     columns.push([label, confidence]);
+                }
+                if (typeof chartData === "object") {
+                    setChartData();
                 }
                 setChartData(data);
             });
