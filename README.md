@@ -8,7 +8,7 @@ React.js + ML5.js를 활용하여 이미지 분석, C3.js를 활용한 분석 �
 
 ## Demo
 
-`https://manngold.github.io/guess-what/`
+Link : [Demo][https://manngold.github.io/guess-what/]
 
 ## Preview
 
