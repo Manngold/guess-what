@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.js": "/guess-what/static/js/main.fa855ae6.chunk.js",
-    "main.js.map": "/guess-what/static/js/main.fa855ae6.chunk.js.map",
+    "main.js": "/guess-what/static/js/main.857c1877.chunk.js",
+    "main.js.map": "/guess-what/static/js/main.857c1877.chunk.js.map",
     "runtime-main.js": "/guess-what/static/js/runtime-main.6e0bf26a.js",
     "runtime-main.js.map": "/guess-what/static/js/runtime-main.6e0bf26a.js.map",
     "static/css/2.d90f2020.chunk.css": "/guess-what/static/css/2.d90f2020.chunk.css",
-    "static/js/2.2940d7fd.chunk.js": "/guess-what/static/js/2.2940d7fd.chunk.js",
-    "static/js/2.2940d7fd.chunk.js.map": "/guess-what/static/js/2.2940d7fd.chunk.js.map",
+    "static/js/2.82f68984.chunk.js": "/guess-what/static/js/2.82f68984.chunk.js",
+    "static/js/2.82f68984.chunk.js.map": "/guess-what/static/js/2.82f68984.chunk.js.map",
     "index.html": "/guess-what/index.html",
-    "precache-manifest.19b6ab5c989938fecdef0c9d823ac459.js": "/guess-what/precache-manifest.19b6ab5c989938fecdef0c9d823ac459.js",
+    "precache-manifest.0c001669d2d0467af4312e0252c9348c.js": "/guess-what/precache-manifest.0c001669d2d0467af4312e0252c9348c.js",
     "service-worker.js": "/guess-what/service-worker.js",
     "static/css/2.d90f2020.chunk.css.map": "/guess-what/static/css/2.d90f2020.chunk.css.map",
-    "static/js/2.2940d7fd.chunk.js.LICENSE.txt": "/guess-what/static/js/2.2940d7fd.chunk.js.LICENSE.txt"
+    "static/js/2.82f68984.chunk.js.LICENSE.txt": "/guess-what/static/js/2.82f68984.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.6e0bf26a.js",
     "static/css/2.d90f2020.chunk.css",
-    "static/js/2.2940d7fd.chunk.js",
-    "static/js/main.fa855ae6.chunk.js"
+    "static/js/2.82f68984.chunk.js",
+    "static/js/main.857c1877.chunk.js"
   ]
 }
